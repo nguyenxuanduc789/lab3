@@ -4,6 +4,8 @@ import com.example.demo.repository.ICategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.entity.Category;
+
 import java.lang.module.ResolutionException;
 import  java.util.List;
 import java.util.Optional;
@@ -21,6 +23,16 @@ public class CategoryService {
             throw new RuntimeException("Category not found");
         }
     }
-    public Category saveCategory(Category category){return  categoryRepository.save(category);}
-    public  void deleteCategory(Long id){ categoryRepository.deleteById(id);}
+    public void addCategory(Category category){
+
+        categoryRepository.save(category);
+    }
+    public void deleteCategory(Long id){
+
+        categoryRepository.deleteById(id);
+    }
+    public void updateCategory(Category category){
+
+        categoryRepository.save(category);
+    }
 }

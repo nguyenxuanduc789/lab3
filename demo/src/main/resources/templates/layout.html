@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>My App</title>
-    <link th:fragment="link-css" rel="stylesheet" th:href="@{/css/boostrap.min.css}">
+    <link th:fragment="link-css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
 </head>
 <body>
 
@@ -27,7 +27,13 @@
                         <a class="nav-link" href="/books">ListBook</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="books/add">Add Book</a>
+                        <a class="nav-link" href="/books/add">Add Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/categories"> List Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/categories/add">Add Category</a>
                     </li>
                 </ul>
             </div>
@@ -36,7 +42,7 @@
 </header>
 <div th:insert="~{::${content}}"></div>
 <footer th:fragment="footer">
-    <script th:src="@{/js/boostrap.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
 </footer>
 </body>
 </html>
